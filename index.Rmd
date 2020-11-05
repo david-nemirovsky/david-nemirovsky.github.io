@@ -1,0 +1,11 @@
+---
+title: "My Website (it's awesome too)"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+# Welcome to My Website :-)
+
+The main purpose of this site is for the completion of Homework #4. It contains a page about me and a flexdashboard of some really cool plots. There are some links to my GitHub account, email address, and LinkedIn profile. I hate writing [about myself](about.html) (to be honest, who doesn't?) so I'll keep everything brief. Enjoy the site!!!
