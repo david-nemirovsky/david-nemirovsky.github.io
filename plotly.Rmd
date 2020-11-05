@@ -33,7 +33,7 @@ scale_fill_discrete = scale_fill_viridis_d
 
 First, let's get the restaurant data:
 
-```{r get data, include = F}
+```{r get data, message = F, warning = F}
 get_all_inspections = function(url) {
   
   all_inspections = vector("list", length = 0)
@@ -92,27 +92,15 @@ sample_df =
     score = as.double(score),
     grade_date = as.Date(grade_date)) %>% 
     select(dba, borough, cuisine_description, critical_flag, score, grade, grade_date) %>% 
-    filter(grade == c("A", "B", "C"))
+    filter(grade == c("A", "B", "C")) %>% 
+    filter(borough != "0")
 ```
 
 The resulting sample dataset is composed of `r nrow(sample_df)` observations.
 
 ## Plot 1
 
-Now, let's make a plot to see the distribution of grades for Chinese food restaurants throughout the 5 boroughs from our sample:
-
-```{r chinese food plot, message = F, warning = F}
-sample_df %>% 
-  filter(str_detect(cuisine_description, "[Cc][Hh][Ii][Nn][Ee][Ss][Ee]")) %>% 
-  group_by(borough, grade) %>% 
-  count(grade) %>% 
-  plot_ly(x = ~grade, y = ~n, color = ~borough, type = "bar", colors = "viridis") %>% 
-  layout(title = "Distribution of Chinese-Food Inspection Grades", xaxis = list(title = "Grade"), yaxis = list(title = "Count"))
-```
-
-## Plot 2
-
-This time, let's plot the mean inspection scores for all types of restaurants in the 5 boroughs within our sample (note that higher scores result from more hazardous health violations):
+Now, let's plot the mean inspection scores for all types of restaurants in the 5 boroughs within our sample (note that higher scores result from more hazardous health violations):
 
 ```{r mean score vs borough plot, message = F, warning = F}
 sample_df %>% 
@@ -120,6 +108,19 @@ sample_df %>%
   summarize(mean_score = mean(score)) %>% 
   plot_ly(x = ~borough, y = ~mean_score, type = "box", color = ~borough, colors = "viridis") %>% 
   layout(title = "Mean Inspection Scores for All Restauarnt Types", xaxis = list(title = "Borough"), yaxis = list(title = "Mean Score"))
+```
+
+## Plot 2
+
+This time, let's make a plot to see the distribution of grades for Chinese food restaurants throughout the 5 boroughs from our sample:
+
+```{r chinese food plot, message = F, warning = F}
+sample_df %>% 
+  filter(str_detect(cuisine_description, "[Cc][Hh][Ii][Nn][Ee][Ss][Ee]")) %>% 
+  group_by(borough, grade) %>% 
+  count(grade) %>% 
+  plot_ly(x = ~grade, y = ~n, color = ~borough, type = "bar", colors = "viridis") %>% 
+  layout(title = "Distribution of Chinese-Food Restaurant Inspection Grades", xaxis = list(title = "Grade"), yaxis = list(title = "Count"))
 ```
 
 ## Plot 3
