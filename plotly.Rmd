@@ -82,7 +82,7 @@ sample_df =
 
 Time for some data tidying:
 
-```{r tidy sample_df}
+```{r tidy sample_df, warning = F}
 sample_df = 
   sample_df %>% 
   mutate(
@@ -130,5 +130,5 @@ Finally, let's plot inspection scores for Mexican food restaurants over time in 
 sample_df %>%
   filter(str_detect(cuisine_description, "[Mm][Ee][Xx][Ii][Cc][Aa][Nn]")) %>% 
   plot_ly(x = ~grade_date, y = ~score, type = "scatter") %>% 
-  layout(title = "Inspection Scores for Mexican-Food Restaurants Over Time", xaxis = list(title = "Borough"), yaxis = list(title = "Score"))
+  layout(title = "Inspection Scores for Mexican-Food Restaurants Over Time", xaxis = list(title = "Date"), yaxis = list(title = "Score"))
 ```
