@@ -1,10 +1,79 @@
 ---
-title: "About Me"
+title: "About Me (aka my resume)"
 output: 
   html_document:
     toc: true
     toc_float: true
 ---
+***
 
-## Here's my resume:
+<div align = "center">
+## **David Nemirovsky**
 
+**Brooklyn, New York 11234 | 1-(347)-394-9939 | david.nemirovsky97@gmail.com**
+
+<div align = "left">
+### **Education**
+
+##### **Columbia University Mailman School of Public Health (New York, NY)**
+
+**Master of Science in Biostatistics (August 2020 – May 2022)** 
+
+**GPA: TBD**
+
+##### **Hunter College (August 2015 – May 2019)** 
+**Bachelor of Arts in Statistics, Bachelor of Arts in Biochemistry (New York, NY)**
+
+**GPA: 3.71 (Statistics GPA: 3.97)**
+
+**Honors: Departmental Honors in Biochemistry, Yalow Honors Scholar, Dean’s List, Shirley Kurmin Mazur Award in Mathematics (Hunter College)**
+
+***
+
+### **Work Experience**
+
+##### **Department of Chemistry at Hunter College (January 2020 – Present)**
+
+*Adjunct Lecturer for General Chemistry Lab and Inquiries into the Nature of Matter* (New York, NY)
+
++	Maintain safe environment by instructing students on proper laboratory techniques and safety protocol.
++	Educate students in underlying fundamental concepts of chemistry present in their lab experiments.
++	Assign students grades based on performance in laboratory and on lab reports.
+
+##### **Watch Limit	(November 2019 – Present)**
+
+*Operations Manager* (New York, NY)
+
++ Analyze monthly data to discover trends and market inefficiencies using R.
++ Manage inventory of up to millions of dollars via MS Excel.
++ Oversee and update website on a rolling basis to accurately reflect market changes.
+
+##### **Private Tutor (August 2019 – Present)**
+
+*Subjects: Algebra, Trigonometry, Calculus, Statistics, Biology, Chemistry (All Middle School – College Level)* (New York, NY)
+
++ Prepare lesson plans tailored to needs of specific student.
++ Engage students using applicable examples and vernacular.
++ Assist with assigned homework and projects.
+
+##### **Public School Athletic League (January 2016 – Present)**
+
+*Wrestling Tournament Manager* (New York, NY)
+
++ Generate tournament brackets, decreasing variability in matches per mat and average time between matches.
++ Rectify spreadsheets with hundreds of registered wrestlers prior to tournament’s start.
++ Dictate assembly of electronics and equipment needed for tournament’s operation.
+
+##### **Nadine Johnson & Associates, Inc. (January 2016 – January 2020)**
+
+*Assistant Finance Director* (New York, NY)
+
++ Determined company’s monthly profitability by comparing revenue versus taxes and expenses.
++ Reconcile bank statements monthly, ensuring accurate bookkeeping.
++ Constructed invoices by organizing client and employee expenses.
+
+***
+
+### **Skills**
+##### **Languages:** Fluent English, Intermediate Russian, and Beginner Spanish
+##### **Software:** R, SPSS, Microsoft Office (Excel, PowerPoint, and Word), WinLab32 for ICP-OES, and AccountEdge
