@@ -10,7 +10,7 @@ output:
 ## Columbia University Mailman School of Public Health
 
 <div align = "center">
-![Professional pic of me](pro_pic.png)
+![](pro_pic.png)
 
 <div align = "left">
 #### About

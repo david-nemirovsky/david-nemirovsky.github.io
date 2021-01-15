@@ -1,0 +1,17 @@
+---
+title: "Some Projects I've Done"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+## Comparing COVID-19 to Past Pandemics
+
+Link: [Future of COVID-19: Looking at Past Pandemics](https://p-sha.github.io/covid19_future.github.io)
+Description: 
+
+## Creating a Linear Model for Factors that Impact Hate Crimes in the U.S. in 2016
+
+Link: [2016 Hate Crimes Linear Model](biostats_proj.pdf)
+Description: 
