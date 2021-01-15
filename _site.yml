@@ -3,12 +3,10 @@ output_dir: "."
 navbar:
   title: "Home"
   right:
-    - text: "About Me"
+    - text: "Resume"
       href: about.html
-    - text: "Plots"
+    - text: "Projects"
       href: plotly.html
-    - text: "Dashboard"
-      href: dashboard.html
     - icon: fa-envelope fa-lg
       href: mailto:dn2501@cumc.columbia.edu
     - icon: fa-github fa-lg

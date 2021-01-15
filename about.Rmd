@@ -1,5 +1,5 @@
 ---
-title: "About Me (aka my resume)"
+title: "Resume"
 output: 
   html_document:
     toc: true
@@ -19,7 +19,7 @@ output:
 
 **Master of Science in Biostatistics (August 2020 – May 2022)** 
 
-**GPA: TBD**
+**GPA: 3.56**
 
 ##### **Hunter College (August 2015 – May 2019)** 
 **Bachelor of Arts in Statistics, Bachelor of Arts in Biochemistry (New York, NY)**
