@@ -9,9 +9,12 @@ output:
 ## Comparing COVID-19 to Past Pandemics
 
 Link: [Future of COVID-19: Looking at Past Pandemics](https://p-sha.github.io/covid19_future.github.io)
-Description: 
 
-## Creating a Linear Model for Factors that Impact Hate Crimes in the U.S. in 2016
+Description: Worked in a group of 4 to research past pandemics, epidemics, and seasonal flu to develop a website with interactive, up-to-date plots and maps comparing them to COVID-19. New and cumulative case and death data was collected, wrangled, and analyzed to make adequate comparisons of COVID-19 to the seasonal flu (Influenza B), past pandemics (H1N1 and Spanish Flu), and the original coronavirus epidemic from 2003 (SARS-CoV-1). These trends were studied to assess future implications of COVID-19, and the basic reproductive rate, $R_0$, was found to be higher for COVID-19 than all of the other diseases studied. RStudio and GitHub were used in collaborative construction of the website. Data was collected from the Centers of Disease Control and Prevention, the World Health Organization, and Kaggle.
 
-Link: [2016 Hate Crimes Linear Model](biostats_proj.pdf)
-Description: 
+
+## Creating a Linear Model for Factors that Impact Hate Crimes in the U.S. in 2016 
+
+Download Report: [Linear Model of Hate Crimes in the U.S. in 2016](biostats_proj.pdf)
+
+Description: Worked in group of 5 to study the covariates most closely associated with hate crimes in the U.S. in 2016, construct a linear model to explain these factors, and then compile a publishable report. The findings suggested that Gini index of income inequality, percent of population with at least a high school education, and unemployment were the factors highest associated with hate crimes in the U.S. in 2016. RStudio and GitHub were used in collaborative construction of the linear model and report. Data was collected from the Southern Poverty Law Center, the Kaiser Family Foundation, and the U.S. Census Bureau.

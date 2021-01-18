@@ -1,5 +1,5 @@
 ---
-title: "Resume"
+title: "Resume ([click here](resume.pdf) for download)"
 output: 
   html_document:
     toc: true
@@ -10,70 +10,87 @@ output:
 <div align = "center">
 ## **David Nemirovsky**
 
-**Brooklyn, New York 11234 | 1-(347)-394-9939 | david.nemirovsky97@gmail.com**
+**Brooklyn, New York 11234 | 1-(347)-394-9939 | david.nemirovsky97@gmail.com | [david-nemirovsky.github.io](david-nemirovsky.github.io)**
+
+***
 
 <div align = "left">
 ### **Education**
 
-##### **Columbia University Mailman School of Public Health (New York, NY)**
+##### **Columbia University Mailman School of Public Health**, New York, NY (Expected May 2022)
 
-**Master of Science in Biostatistics (August 2020 – May 2022)** 
+Master of Science in Biostatistics GPA: 3.56
 
-**GPA: 3.56**
+Relevant Coursework: Biostatistics I & II, Data Science I & II, Latent Variables and SEM, Probability, Statistical Inference
 
-##### **Hunter College (August 2015 – May 2019)** 
-**Bachelor of Arts in Statistics, Bachelor of Arts in Biochemistry (New York, NY)**
+Involvement: Biostatistics Computing Club, Healthcare Data Analytics
 
-**GPA: 3.71 (Statistics GPA: 3.97)**
+##### **Hunter College**, New York, NY (May 2019)
 
-**Honors: Departmental Honors in Biochemistry, Yalow Honors Scholar, Dean’s List, Shirley Kurmin Mazur Award in Mathematics (Hunter College)**
+Bachelor of Arts in Statistics, Bachelor of Arts in Biochemistry GPA: 3.71 (Statistics GPA: 3.97)
+
+**Honors:** Departmental Honors in Biochemistry, Yalow Honors Scholar, Dean’s List, Shirley Kurmin Mazur Award in Mathematics
+
+***
+
+### **Acadmeic Projects**
+
+“Future of COVID-19: Looking at Past Pandemics”, Columbia University (Fall 2020)
+
+Worked in group of 4 to develop website with interactive plots and maps (with up-to-date data), comparing COVID-19 new and cumulative case/death data to that of seasonal flu (Influenza B), past pandemics (H1N1 and Spanish Flu), and original coronavirus epidemic from 2003 (SARS-CoV-1). Trends were studied to assess future implications of COVID-19, and the basic reproductive rate was found to be higher than all other diseases studied. RStudio and GitHub were used in collaborative construction of the website.
+
+“Linear Model to Explain Hate Crimes in the U.S. in 2016”, Columbia University (Fall 2020)
+
+Worked in group of 5 to study covariates associated with hate crimes in the U.S. in 2016, construct a linear model to explain the factors highest association with hate crimes, and then compile a publishable report. The findings suggested that income inequality, percent of population with at least a high school education, and unemployment were the covariates highest associated with hate crimes. RStudio and GitHub were used in collaborative construction of the linear model and report.
 
 ***
 
 ### **Work Experience**
 
-##### **Department of Chemistry at Hunter College (January 2020 – Present)**
+##### **Department of Chemistry at Hunter College**, New York, NY (January 2020 – Present)
 
-*Adjunct Lecturer for General Chemistry Lab and Inquiries into the Nature of Matter* (New York, NY)
+*Adjunct Lecturer for General Chemistry Lab and Inquiries into the Nature of Matter*
 
-+	Maintain safe environment by instructing students on proper laboratory techniques and safety protocol.
-+	Educate students in underlying fundamental concepts of chemistry present in their lab experiments.
-+	Assign students grades based on performance in laboratory and on lab reports.
++	Instruct students on proper laboratory techniques and safety protocol
++	Educate 60+ undergraduate students in underlying fundamental concepts of chemistry present in lab experiments 
++	Assign students grades based on performance in laboratory and on lab reports
++	Host office hours once per week to provide additional instruction 
 
-##### **Watch Limit	(November 2019 – Present)**
+##### **Watch Limit**, New York, NY	(November 2019 – Present)
 
-*Operations Manager* (New York, NY)
+*Operations Manager*
 
-+ Analyze monthly data to discover trends and market inefficiencies using R.
-+ Manage inventory of up to millions of dollars via MS Excel.
-+ Oversee and update website on a rolling basis to accurately reflect market changes.
+•	Analyze monthly sales data to discover trends and set inventory prices based on current market value using R
+•	Input and manage business inventory between 1-2 million dollars via MS Excel
+•	Oversee and update website on rolling basis to accurately reflect market changes
 
-##### **Private Tutor (August 2019 – Present)**
+##### **Private Tutor**, New York, NY (August 2019 – Present)
 
-*Subjects: Algebra, Trigonometry, Calculus, Statistics, Biology, Chemistry (All Middle School – College Level)* (New York, NY)
+*Subjects: Algebra, Trigonometry, Calculus, Statistics, Biology, Chemistry (All Middle School – College Level)*
 
-+ Prepare lesson plans tailored to needs of specific student.
-+ Engage students using applicable examples and vernacular.
-+ Assist with assigned homework and projects.
++	Prepare lesson plans tailored to needs of specific students and engage them using applicable examples and vernacular
++	Assist with assigned homework and projects
++	Recent clients received high marks on the math section of the SAT and an A in Calculus
 
-##### **Public School Athletic League (January 2016 – Present)**
+##### **Public School Athletic League**, New York, NY (January 2016 – Present)
 
-*Wrestling Tournament Manager* (New York, NY)
+*Wrestling Tournament Manager*
 
-+ Generate tournament brackets, decreasing variability in matches per mat and average time between matches.
-+ Rectify spreadsheets with hundreds of registered wrestlers prior to tournament’s start.
-+ Dictate assembly of electronics and equipment needed for tournament’s operation.
++	Generate tournament brackets, minimizing variability in matches per mat and average time between matches
++	Rectify spreadsheets with hundreds of registered wrestlers prior to tournament’s start
++	Dictate assembly of electronics and equipment needed for tournament’s operation
 
-##### **Nadine Johnson & Associates, Inc. (January 2016 – January 2020)**
+##### **Nadine Johnson & Associates, Inc.**, New York, NY (January 2016 – January 2020)
 
-*Assistant Finance Director* (New York, NY)
+*Assistant Finance Director*
 
-+ Determined company’s monthly profitability by comparing revenue versus taxes and expenses.
-+ Reconcile bank statements monthly, ensuring accurate bookkeeping.
-+ Constructed invoices by organizing client and employee expenses.
++	Determined company’s monthly profitability by comparing revenue versus taxes and expenses using MS Excel
++	Reconcile bank statements monthly, ensuring accurate bookkeeping and constructed invoices by organizing client and employee expenses
 
 ***
 
 ### **Skills**
-##### **Languages:** Fluent English, Intermediate Russian, and Beginner Spanish
-##### **Software:** R, SPSS, Microsoft Office (Excel, PowerPoint, and Word), WinLab32 for ICP-OES, and AccountEdge
+
+##### **Language:**Intermediate Russian
+
+##### **Software:** R, SPSS, Excel, PowerPoint, Word,  WinLab32 for ICP-OES, and AccountEdge (All advanced usage)
