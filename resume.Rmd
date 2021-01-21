@@ -1,5 +1,5 @@
 ---
-title: "Resume ([click here](resume.pdf) for download)"
+title: "Resume ([click here](resume.pdf) to download)"
 output: 
   html_document:
     toc: true
@@ -60,9 +60,9 @@ Worked in group of 5 to study covariates associated with hate crimes in the U.S.
 
 *Operations Manager*
 
-•	Analyze monthly sales data to discover trends and set inventory prices based on current market value using R
-•	Input and manage business inventory between 1-2 million dollars via MS Excel
-•	Oversee and update website on rolling basis to accurately reflect market changes
++	Analyze monthly sales data to discover trends and set inventory prices based on current market value using R
++	Input and manage business inventory between 1-2 million dollars via MS Excel
++	Oversee and update website on rolling basis to accurately reflect market changes
 
 ##### **Private Tutor**, New York, NY (August 2019 – Present)
 
