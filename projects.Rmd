@@ -2,10 +2,12 @@
 title: "Some Projects I've Done"
 output: 
   html_document:
-    toc: true
+    toc: false
     toc_float: true
     css: styles.css
 ---
+
+<br>
 
 ## Comparing COVID-19 to Past Pandemics
 
