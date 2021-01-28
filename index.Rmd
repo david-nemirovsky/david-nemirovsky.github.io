@@ -6,8 +6,6 @@ output:
     toc_float: true
 ---
 
-<br>
-
 ## M.S. in Biostatistics Candidate (Expected May 2022)
 ## Columbia University Mailman School of Public Health
 
