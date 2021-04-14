@@ -7,11 +7,11 @@ output:
     css: styles.css
 ---
 
-<br>
+***
 
-## Predicting the Outcome of the 2021 NCAA DI Men’s Basketball Tournament
+## Predicting the 2021 NCAA DI Men’s Basketball Tournament
 
-Download Report: [Predicting the 2020-2021 NCAA DI Men’s Basketball Tournament](tourney_proj.pdf)
+Download Report: [Predicting the Outcome of the 2021 NCAA DI Men’s Basketball Tournament](tourney_proj.pdf)
 
 Overview: Worked individually to train machine learning models to predict the winner of the 2021 Men’s DI College Basketball Championship. Past years’ regular season and tournament data were used for cross-validation (CV) and ROCs were compared to build an optimized model. Functions were then created to run a simulation of the tournament, using the optimized model.
 
@@ -20,6 +20,8 @@ Data: Collected from Kaggle's "March Machine Learning Mania 2021 - NCAAM" compet
 Results: Using a logistic regression through 10-fold CV, Gonzaga will win the 2020-2021 DI Men's Basketball Championship.
 
 Software: RStudio was used in construction of the models and simulation.
+
+<br>
 
 ## Comparing COVID-19 to Past Pandemics
 
@@ -33,9 +35,11 @@ Results: Pandemic trends were studied to assess future implications of COVID-19,
 
 Software: RStudio and GitHub were used in collaborative construction of the website. 
 
-## Creating a Linear Model for Factors that Impact Hate Crimes in the U.S. in 2016 
+<br>
 
-Download Report: [Linear Model of Hate Crimes in the U.S. in 2016](biostats_proj.pdf)
+## Linear Model of Hate Crimes in the U.S. in 2016
+
+Download Report: [Creating a Linear Model for Factors that Impact Hate Crimes in the U.S. in 2016](biostats_proj.pdf)
 
 Overview: Worked in a group of 5 to study the covariates most closely associated with hate crimes in the U.S. in 2016, construct a linear model to explain these factors, and then compile a publishable report. 
 
