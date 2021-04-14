@@ -2,12 +2,24 @@
 title: "Some Projects I've Done"
 output: 
   html_document:
-    toc: false
+    toc: true
     toc_float: true
     css: styles.css
 ---
 
 <br>
+
+## Predicting the Outcome of the 2021 NCAA DI Men’s Basketball Tournament
+
+Download Report: [Predicting the 2020-2021 NCAA DI Men’s Basketball Tournament](tourney_proj.pdf)
+
+Overview: Worked individually to train machine learning models to predict the winner of the 2021 Men’s DI College Basketball Championship. Past years’ regular season and tournament data were used for cross-validation (CV) and ROCs were compared to build an optimized model. Functions were then created to run a simulation of the tournament, using the optimized model.
+
+Data: Collected from Kaggle's "March Machine Learning Mania 2021 - NCAAM" competition.
+
+Results: Using a logistic regression through 10-fold CV, Gonzaga will win the 2020-2021 DI Men's Basketball Championship.
+
+Software: RStudio was used in construction of the models and simulation.
 
 ## Comparing COVID-19 to Past Pandemics
 
