@@ -19,7 +19,7 @@ output:
 
 ##### **Columbia University Mailman School of Public Health**, New York, NY (Expected May 2022)
 
-Master of Science in Biostatistics GPA: 3.56
+Master of Science in Biostatistics GPA: 3.67
 
 Relevant Coursework: Biostatistics I & II, Data Science I & II, Latent Variables and SEM, Probability, Statistical Inference
 
