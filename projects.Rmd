@@ -9,11 +9,25 @@ output:
 
 ***
 
+## Predicting Survival on the Sinking R.M.S. Titanic
+
+Download Report: [Predicting Survival on the Sinking R.M.S. Titanic](titanic_proj.pdf)
+
+Overview: Worked in group of two to train and test machine learning models to predict passenger survival on the infamous sinking cruise ship, *Titanic*. Real passenger data (age, sex, socio-economic status, number of siblings/spouse on board, number of parents/children on board, ticket number, fare, cabin number, and port of embarkation) was used for repeated cross-validation (CV) and receiver operating characteristics (ROCs) were compared to build an optimized model. The final black box model was then explained using feature explanation plots, to assess circumstances of individuals that led to survival on the sinking cruise ship.
+
+Data: Collected from Kaggle's "Titanic Machine Learning from Disaster" competition.
+
+Results: An ADABoost machine learning model turned out to be the most optimal in predicting *Titanic* survival, reaching an accuracy of about 77%.
+
+Software: RStudio was used in construction of the models.
+
+<br>
+
 ## Predicting the 2021 NCAA DI Men’s Basketball Tournament
 
 Download Report: [Predicting the Outcome of the 2021 NCAA DI Men’s Basketball Tournament](tourney_proj.pdf)
 
-Overview: Worked individually to train machine learning models to predict the winner of the 2021 Men’s DI College Basketball Championship. Past years’ regular season and tournament data were used for cross-validation (CV) and ROCs were compared to build an optimized model. Functions were then created to run a simulation of the tournament, using the optimized model.
+Overview: Worked individually to train machine learning models to predict the winner of the 2021 Men’s DI College Basketball Championship. Past years’ regular season and tournament data were used for CV and ROCs were compared to build an optimized model. Functions were then created to run a simulation of the tournament, using the optimized model.
 
 Data: Collected from Kaggle's "March Machine Learning Mania 2021 - NCAAM" competition.
 
