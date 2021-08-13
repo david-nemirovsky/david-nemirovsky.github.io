@@ -48,7 +48,7 @@ Bachelor of Arts in Statistics, Bachelor of Arts in Biochemistry GPA: 3.71 (Stat
 
 #### **Columbia University Irving Medical Center, Department of Neurology**, New York, NY (June 2021 – Present)
 
-*Research Fellow for Hip-Hop H.E.A.L.S.*
+*Research Fellow for Hip-Hop Public Health*
 
 + Analyze dataset of 75 underrepresented 5th grade students to evaluate social and emotional learning (SEL) interventions using R
 + Establish data infrastructure for efficient assessment of intervention efficacy during implementation of SEL modules
