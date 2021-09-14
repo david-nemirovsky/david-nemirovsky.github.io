@@ -21,7 +21,8 @@ output:
 
 Master of Science in Biostatistics GPA: 3.67
 
-Relevant Coursework: Biostatistics I & II, Data Science I & II, Latent Variables and SEM, Probability, Statistical Inference
+Relevant Coursework: Biostatistics I & II, Data Science I & II, Clinical Trial Methodology, Survival Analysis, Latent Variables and Structural
+Equation Modeling, Probability, Statistical Inference, Epidemiology
 
 Involvement: Biostatistics Computing Club, Healthcare Data Analytics
 
@@ -101,4 +102,4 @@ Bachelor of Arts in Statistics, Bachelor of Arts in Biochemistry GPA: 3.71 (Stat
 
 ##### **Language:**Intermediate Russian
 
-##### **Software:** R, SPSS, Excel, PowerPoint, Word,  WinLab32 for ICP-OES, and AccountEdge (All advanced usage)
+##### **Software:** R, SAS, SQL, SPSS, Excel, PowerPoint, Word,  WinLab32 for ICP-OES, and AccountEdge (All advanced usage)
