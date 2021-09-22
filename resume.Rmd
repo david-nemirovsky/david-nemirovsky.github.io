@@ -102,4 +102,4 @@ Bachelor of Arts in Statistics, Bachelor of Arts in Biochemistry GPA: 3.71 (Stat
 
 ##### **Language:**Intermediate Russian
 
-##### **Software:** R, SAS, SQL, SPSS, Excel, PowerPoint, Word,  WinLab32 for ICP-OES, and AccountEdge (All advanced usage)
+##### **Software:** R, SAS, SQL, SPSS, Access, and Excel (All advanced usage)
