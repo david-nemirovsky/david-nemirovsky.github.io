@@ -9,6 +9,20 @@ output:
 
 ***
 
+## Predicting Heart Disease Using Logistic Regression Modeling
+
+Download Poster: [Predicting Heart Disease Using Diagnostic Tests](sas_poster.pdf)
+
+Overview: Worked individually to develop models to predict heart disease by assessing different variables using diagnostic testing. Real hospital data was obtained from two U.S. and two European hospitals. The primary outcome, presence of heart disease, was found to be significantly impacted by sex, type of chest pain, exercise induced angina, ST depression induced by exercise relative to rest, slope of the peak exercise ST segment, presence of the blood disorder, thalassemia, number of major vessels colored by fluoroscopy, and which hospital the patient stayed in. Presence of heart disease was assessed by number of narrowing blood vessels, and then dichotomized in the final model.
+
+Data: Collected from Kaggle's "Titanic Machine Learning from Disaster" competition.
+
+Results: The final logostic regression model, using the above covariates, demonstrated excellent ability to predict heart disease, with an area under the receiver operating characteristic (ROC) curve of 0.94.
+
+Software: SAS Version 9.4 was used for all statistical analyses in this project.
+
+<br>
+
 ## Predicting Survival on the Sinking R.M.S. Titanic
 
 Download Report: [Predicting Survival on the Sinking R.M.S. Titanic](titanic_proj.pdf)

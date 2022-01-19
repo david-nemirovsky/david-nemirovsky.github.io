@@ -36,4 +36,4 @@ I hope to further my research experience at Columbia University by contributing 
 
 ### Projects
 
-A few projects I've worked on during my time at Columbia include predicting survival on the infamous cruise ship, R.M.S. *Titanic*, prediciting the outcome of the 2021 NCAA DI Men’s Basketball Tournament, building a website which compares COVID-19 case and death data to that of past pandemics, and creating a linear model to determine covariates responsible for hate crimes within the U.S. in 2016. You can see more info on these in the [Projects](https://david-nemirovsky.github.io/projects.html) tab.
+A few projects I've worked on during my time at Columbia include predicting heart disease using diagnostic tests, predicting survival on the infamous cruise ship, R.M.S. *Titanic*, predicting the outcome of the 2021 NCAA DI Men’s Basketball Tournament, building a website which compares COVID-19 case and death data to that of past pandemics, and creating a linear model to determine covariates responsible for hate crimes within the U.S. in 2016. You can see more info on these in the [Projects](https://david-nemirovsky.github.io/projects.html) tab.
