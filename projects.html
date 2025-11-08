@@ -13,8 +13,8 @@
 
 <title>Some Projects I’ve Done</title>
 
-<script src="site_libs/header-attrs-2.10/header-attrs.js"></script>
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/darkly.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -29,14 +29,14 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
-<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet" />
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -57,6 +57,7 @@ if (window.hljs) {
   }
 }
 </script>
+
 
 
 
@@ -86,6 +87,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -143,11 +147,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -176,8 +184,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -185,16 +193,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -311,7 +312,7 @@ div.tocify {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -330,7 +331,13 @@ div.tocify {
   <a href="projects.html">Projects</a>
 </li>
 <li>
-  <a href="mailto:dn2501@cumc.columbia.edu">
+  <a href="https://scholar.google.com/citations?user=HV5IIrkAAAAJ&amp;hl=en&amp;oi=ao">
+    <span class="fa fa-book fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="mailto:david.nemirovsky97@gmail.com">
     <span class="fa fa-envelope fa-lg"></span>
      
   </a>
@@ -362,49 +369,110 @@ div.tocify {
 
 
 <hr />
-<div id="predicting-heart-disease-using-logistic-regression-modeling" class="section level2">
+<div id="predicting-heart-disease-using-logistic-regression-modeling"
+class="section level2">
 <h2>Predicting Heart Disease Using Logistic Regression Modeling</h2>
-<p>Download Poster: <a href="sas_poster.pdf">Predicting Heart Disease Using Diagnostic Tests</a></p>
-<p>Overview: Worked individually to develop models to predict heart disease by assessing different variables using diagnostic testing. Real hospital data was obtained from two U.S. and two European hospitals. The primary outcome, presence of heart disease, was found to be significantly impacted by sex, type of chest pain, exercise induced angina, ST depression induced by exercise relative to rest, slope of the peak exercise ST segment, presence of the blood disorder, thalassemia, number of major vessels colored by fluoroscopy, and which hospital the patient stayed in. Presence of heart disease was assessed by number of narrowing blood vessels, and then dichotomized in the final model.</p>
+<p>Download Poster: <a href="sas_poster.pdf">Predicting Heart Disease
+Using Diagnostic Tests</a></p>
+<p>Overview: Worked individually to develop models to predict heart
+disease by assessing different variables using diagnostic testing. Real
+hospital data was obtained from two U.S. and two European hospitals. The
+primary outcome, presence of heart disease, was found to be
+significantly impacted by sex, type of chest pain, exercise induced
+angina, ST depression induced by exercise relative to rest, slope of the
+peak exercise ST segment, presence of the blood disorder, thalassemia,
+number of major vessels colored by fluoroscopy, and which hospital the
+patient stayed in. Presence of heart disease was assessed by number of
+narrowing blood vessels, and then dichotomized in the final model.</p>
 <p>Data: Collected from two U.S. and two European hospitals.</p>
-<p>Results: The final logostic regression model, using the above covariates, demonstrated excellent ability to predict heart disease, with an area under the receiver operating characteristic (ROC) curve of 0.94.</p>
-<p>Software: SAS Version 9.4 was used for all statistical analyses in this project.</p>
+<p>Results: The final logostic regression model, using the above
+covariates, demonstrated excellent ability to predict heart disease,
+with an area under the receiver operating characteristic (ROC) curve of
+0.94.</p>
+<p>Software: SAS Version 9.4 was used for all statistical analyses in
+this project.</p>
 <p><br></p>
 </div>
-<div id="predicting-survival-on-the-sinking-r.m.s.-titanic" class="section level2">
+<div id="predicting-survival-on-the-sinking-r.m.s.-titanic"
+class="section level2">
 <h2>Predicting Survival on the Sinking R.M.S. Titanic</h2>
-<p>Download Report: <a href="titanic_proj.pdf">Predicting Survival on the Sinking R.M.S. Titanic</a></p>
-<p>Overview: Worked in group of two to train and test machine learning models to predict passenger survival on the infamous sinking cruise ship, <em>Titanic</em>. Real passenger data (age, sex, socio-economic status, number of siblings/spouse on board, number of parents/children on board, ticket number, fare, cabin number, and port of embarkation) was used for repeated cross-validation (CV) and receiver operating characteristics (ROCs) were compared to build an optimized model. The final black box model was then explained using feature explanation plots, to assess circumstances of individuals that led to survival on the sinking cruise ship.</p>
-<p>Data: Collected from Kaggle’s “Titanic Machine Learning from Disaster” competition.</p>
-<p>Results: An ADABoost machine learning model turned out to be the most optimal in predicting <em>Titanic</em> survival, reaching an accuracy of about 77%.</p>
+<p>Download Report: <a href="titanic_proj.pdf">Predicting Survival on
+the Sinking R.M.S. Titanic</a></p>
+<p>Overview: Worked in group of two to train and test machine learning
+models to predict passenger survival on the infamous sinking cruise
+ship, <em>Titanic</em>. Real passenger data (age, sex, socio-economic
+status, number of siblings/spouse on board, number of parents/children
+on board, ticket number, fare, cabin number, and port of embarkation)
+was used for repeated cross-validation (CV) and receiver operating
+characteristics (ROCs) were compared to build an optimized model. The
+final black box model was then explained using feature explanation
+plots, to assess circumstances of individuals that led to survival on
+the sinking cruise ship.</p>
+<p>Data: Collected from Kaggle’s “Titanic Machine Learning from
+Disaster” competition.</p>
+<p>Results: An ADABoost machine learning model turned out to be the most
+optimal in predicting <em>Titanic</em> survival, reaching an accuracy of
+about 77%.</p>
 <p>Software: RStudio was used in construction of the models.</p>
 <p><br></p>
 </div>
-<div id="predicting-the-2021-ncaa-di-mens-basketball-tournament" class="section level2">
+<div id="predicting-the-2021-ncaa-di-mens-basketball-tournament"
+class="section level2">
 <h2>Predicting the 2021 NCAA DI Men’s Basketball Tournament</h2>
-<p>Download Report: <a href="tourney_proj.pdf">Predicting the Outcome of the 2021 NCAA DI Men’s Basketball Tournament</a></p>
-<p>Overview: Worked individually to train machine learning models to predict the winner of the 2021 Men’s DI College Basketball Championship. Past years’ regular season and tournament data were used for CV and ROCs were compared to build an optimized model. Functions were then created to run a simulation of the tournament, using the optimized model.</p>
-<p>Data: Collected from Kaggle’s “March Machine Learning Mania 2021 - NCAAM” competition.</p>
-<p>Results: Using a logistic regression through 10-fold CV, Gonzaga will win the 2020-2021 DI Men’s Basketball Championship.</p>
-<p>Software: RStudio was used in construction of the models and simulation.</p>
+<p>Download Report: <a href="tourney_proj.pdf">Predicting the Outcome of
+the 2021 NCAA DI Men’s Basketball Tournament</a></p>
+<p>Overview: Worked individually to train machine learning models to
+predict the winner of the 2021 Men’s DI College Basketball Championship.
+Past years’ regular season and tournament data were used for CV and ROCs
+were compared to build an optimized model. Functions were then created
+to run a simulation of the tournament, using the optimized model.</p>
+<p>Data: Collected from Kaggle’s “March Machine Learning Mania 2021 -
+NCAAM” competition.</p>
+<p>Results: Using a logistic regression through 10-fold CV, Gonzaga will
+win the 2020-2021 DI Men’s Basketball Championship.</p>
+<p>Software: RStudio was used in construction of the models and
+simulation.</p>
 <p><br></p>
 </div>
 <div id="comparing-covid-19-to-past-pandemics" class="section level2">
 <h2>Comparing COVID-19 to Past Pandemics</h2>
-<p>Link: <a href="https://p-sha.github.io/covid19_future.github.io">Future of COVID-19: Looking at Past Pandemics</a></p>
-<p>Overview: Worked in a group of 4 to research past pandemics, epidemics, and seasonal flu to develop a website with interactive, up-to-date plots and maps comparing them to COVID-19. New and cumulative case and death data was collected, wrangled, and analyzed to make adequate comparisons of COVID-19 to the seasonal flu (Influenza B), past pandemics (H1N1 and Spanish Flu), and the original coronavirus epidemic from 2003 (SARS-CoV-1).</p>
-<p>Data: Collected from the Centers of Disease Control and Prevention (CDC), the World Health Organization (WHO), and Kaggle.</p>
-<p>Results: Pandemic trends were studied to assess future implications of COVID-19, and the basic reproductive rate, <span class="math inline">\(R_0\)</span>, was found to be higher for COVID-19 than all of the other diseases studied.</p>
-<p>Software: RStudio and GitHub were used in collaborative construction of the website.</p>
+<p>Link: <a
+href="https://p-sha.github.io/covid19_future.github.io">Future of
+COVID-19: Looking at Past Pandemics</a></p>
+<p>Overview: Worked in a group of 4 to research past pandemics,
+epidemics, and seasonal flu to develop a website with interactive,
+up-to-date plots and maps comparing them to COVID-19. New and cumulative
+case and death data was collected, wrangled, and analyzed to make
+adequate comparisons of COVID-19 to the seasonal flu (Influenza B), past
+pandemics (H1N1 and Spanish Flu), and the original coronavirus epidemic
+from 2003 (SARS-CoV-1).</p>
+<p>Data: Collected from the Centers of Disease Control and Prevention
+(CDC), the World Health Organization (WHO), and Kaggle.</p>
+<p>Results: Pandemic trends were studied to assess future implications
+of COVID-19, and the basic reproductive rate, <span
+class="math inline">\(R_0\)</span>, was found to be higher for COVID-19
+than all of the other diseases studied.</p>
+<p>Software: RStudio and GitHub were used in collaborative construction
+of the website.</p>
 <p><br></p>
 </div>
-<div id="linear-model-of-hate-crimes-in-the-u.s.-in-2016" class="section level2">
+<div id="linear-model-of-hate-crimes-in-the-u.s.-in-2016"
+class="section level2">
 <h2>Linear Model of Hate Crimes in the U.S. in 2016</h2>
-<p>Download Report: <a href="biostats_proj.pdf">Creating a Linear Model for Factors that Impact Hate Crimes in the U.S. in 2016</a></p>
-<p>Overview: Worked in a group of 5 to study the covariates most closely associated with hate crimes in the U.S. in 2016, construct a linear model to explain these factors, and then compile a publishable report.</p>
-<p>Data: Collected from the Southern Poverty Law Center (SPLC), the Kaiser Family Foundation (KFF), and the U.S. Census Bureau.</p>
-<p>Results: The findings suggested that Gini index of income inequality, percent of population with at least a high school education, and unemployment were the factors highest associated with hate crimes in the U.S. in 2016.</p>
-<p>Software: RStudio and GitHub were used in collaborative construction of the linear model and report.</p>
+<p>Download Report: <a href="biostats_proj.pdf">Creating a Linear Model
+for Factors that Impact Hate Crimes in the U.S. in 2016</a></p>
+<p>Overview: Worked in a group of 5 to study the covariates most closely
+associated with hate crimes in the U.S. in 2016, construct a linear
+model to explain these factors, and then compile a publishable
+report.</p>
+<p>Data: Collected from the Southern Poverty Law Center (SPLC), the
+Kaiser Family Foundation (KFF), and the U.S. Census Bureau.</p>
+<p>Results: The findings suggested that Gini index of income inequality,
+percent of population with at least a high school education, and
+unemployment were the factors highest associated with hate crimes in the
+U.S. in 2016.</p>
+<p>Software: RStudio and GitHub were used in collaborative construction
+of the linear model and report.</p>
 </div>
 
 

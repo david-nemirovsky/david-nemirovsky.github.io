@@ -13,8 +13,8 @@
 
 <title>Resume (click here to download)</title>
 
-<script src="site_libs/header-attrs-2.10/header-attrs.js"></script>
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/darkly.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -29,14 +29,14 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
-<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet" />
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -65,6 +65,7 @@ if (window.hljs) {
 
 
 
+
 <style type = "text/css">
 .main-container {
   max-width: 940px;
@@ -85,6 +86,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -142,11 +146,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -175,8 +183,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -184,16 +192,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -310,7 +311,7 @@ div.tocify {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -329,7 +330,13 @@ div.tocify {
   <a href="projects.html">Projects</a>
 </li>
 <li>
-  <a href="mailto:dn2501@cumc.columbia.edu">
+  <a href="https://scholar.google.com/citations?user=HV5IIrkAAAAJ&amp;hl=en&amp;oi=ao">
+    <span class="fa fa-book fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="mailto:david.nemirovsky97@gmail.com">
     <span class="fa fa-envelope fa-lg"></span>
      
   </a>
@@ -355,99 +362,166 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Resume (<a href="resume.pdf">click here</a> to download)</h1>
+<h1 class="title toc-ignore">Resume (<a href="resume.pdf">click here</a>
+to download)</h1>
 
 </div>
 
 
 <hr />
-<div align = "center">
-<div id="david-nemirovsky" class="section level2">
+<div id="david-nemirovsky" class="section level2" align="center">
 <h2><strong>David Nemirovsky</strong></h2>
-<p><strong>Brooklyn, New York 11234 | 1-(347)-394-9939 | <a href="mailto:david.nemirovsky97@gmail.com" class="email">david.nemirovsky97@gmail.com</a> | <a href="davidnemirovsky.com">davidnemirovsky.com</a></strong></p>
+<p><strong>Brooklyn, New York 11234 | 1-(347)-394-9939 | <a
+href="mailto:david.nemirovsky97@gmail.com"
+class="email">david.nemirovsky97@gmail.com</a> | <a
+href="davidnemirovsky.com">davidnemirovsky.com</a></strong></p>
 <hr />
-<div align = "left">
+<div align="left">
 <div id="education" class="section level3">
 <h3><strong>Education</strong></h3>
-<div id="columbia-university-mailman-school-of-public-health-new-york-ny-may-2022" class="section level5">
-<h5><strong>Columbia University Mailman School of Public Health</strong>, New York, NY (May 2022)</h5>
+<div
+id="columbia-university-mailman-school-of-public-health-new-york-ny-may-2022"
+class="section level5">
+<h5><strong>Columbia University Mailman School of Public
+Health</strong>, New York, NY (May 2022)</h5>
 <p>Master of Science in Biostatistics GPA: 3.71</p>
-<p>Relevant Coursework: Biostatistics I &amp; II (GLM &amp; Longitudinal Data Analysis), Data Science I &amp; II (Machine Learning Algorithms), Clinical Trial Methodology, Survival Analysis, Latent Variables and Structural Equation Modeling, Statistical Inference (Classical &amp; Bayesian Estimation)</p>
-<p>Involvement: Biostatistics Computing Club, Healthcare Data Analytics</p>
-<p><strong>Honors:</strong> FORWARD (Fighting Oppression, Racism &amp; White Supremacy Through Action, Research &amp; Discourse) Community Fellowship Award</p>
+<p>Relevant Coursework: Biostatistics I &amp; II (GLM &amp; Longitudinal
+Data Analysis), Data Science I &amp; II (Machine Learning Algorithms),
+Clinical Trial Methodology, Survival Analysis, Latent Variables and
+Structural Equation Modeling, Statistical Inference (Classical &amp;
+Bayesian Estimation)</p>
+<p>Involvement: Biostatistics Computing Club, Healthcare Data
+Analytics</p>
+<p><strong>Honors:</strong> FORWARD (Fighting Oppression, Racism &amp;
+White Supremacy Through Action, Research &amp; Discourse) Community
+Fellowship Award</p>
 </div>
 <div id="hunter-college-new-york-ny-may-2019" class="section level5">
 <h5><strong>Hunter College</strong>, New York, NY (May 2019)</h5>
-<p>Bachelor of Arts in Statistics, Bachelor of Arts in Biochemistry GPA: 3.71 (Statistics GPA: 3.97)</p>
-<p><strong>Honors:</strong> Departmental Honors in Biochemistry, Yalow Honors Scholar, Dean’s List, Shirley Kurmin Mazur Award in Mathematics</p>
+<p>Bachelor of Arts in Statistics, Bachelor of Arts in Biochemistry GPA:
+3.71 (Statistics GPA: 3.97)</p>
+<p><strong>Honors:</strong> Departmental Honors in Biochemistry, Yalow
+Honors Scholar, Dean’s List, Shirley Kurmin Mazur Award in
+Mathematics</p>
 <hr />
 </div>
 </div>
 <div id="work-experience" class="section level3">
 <h3><strong>Work Experience</strong></h3>
-<div id="memorial-sloan-kettering-cancer-center-department-of-epidemiology-and-biostatistics-new-york-ny-may-2022---present" class="section level4">
-<h4><strong>Memorial Sloan Kettering Cancer Center, Department of Epidemiology and Biostatistics</strong>, New York, NY (May 2022 - Present)</h4>
-<p><em>Assistant Research Biostatistician</em></p>
+<div
+id="memorial-sloan-kettering-cancer-center-department-of-epidemiology-and-biostatistics-new-york-ny-may-2022---present"
+class="section level4">
+<h4><strong>Memorial Sloan Kettering Cancer Center, Department of
+Epidemiology and Biostatistics</strong>, New York, NY (May 2022 -
+Present)</h4>
+<p><em>Research Biostatistician</em></p>
 </div>
-<div id="columbia-university-mailman-school-of-public-health-department-of-population-family-health-new-york-ny-june-2021-may-2022" class="section level4">
-<h4><strong>Columbia University Mailman School of Public Health, Department of Population &amp; Family Health</strong>, New York, NY (June 2021 – May 2022)</h4>
+<div
+id="columbia-university-mailman-school-of-public-health-department-of-population-family-health-new-york-ny-june-2021-may-2022"
+class="section level4">
+<h4><strong>Columbia University Mailman School of Public Health,
+Department of Population &amp; Family Health</strong>, New York, NY
+(June 2021 – May 2022)</h4>
 <p><em>Quantitative Research Assistant</em></p>
 <ul>
-<li>Developed statistical models to examine significance of multiracial identification across 8 health outcomes and 4 covariates using R</li>
-<li>Constructed dozens of exploratory plots/tables to visualize differences among multiracial groups using <code>ggplot</code> and <code>Shiny</code> packages in R</li>
-<li>Generated accessible reports of statistical findings for discussions with team and principal investigator using RMarkdown</li>
-<li>Tidied dataset containing over 3000 participants and 175 variables into workable dataset using R</li>
+<li>Developed statistical models to examine significance of multiracial
+identification across 8 health outcomes and 4 covariates using R</li>
+<li>Constructed dozens of exploratory plots/tables to visualize
+differences among multiracial groups using <code>ggplot</code> and
+<code>Shiny</code> packages in R</li>
+<li>Generated accessible reports of statistical findings for discussions
+with team and principal investigator using RMarkdown</li>
+<li>Tidied dataset containing over 3000 participants and 175 variables
+into workable dataset using R</li>
 </ul>
 </div>
-<div id="columbia-university-irving-medical-center-department-of-neurology-new-york-ny-june-2021-may-2022" class="section level4">
-<h4><strong>Columbia University Irving Medical Center, Department of Neurology</strong>, New York, NY (June 2021 – May 2022)</h4>
+<div
+id="columbia-university-irving-medical-center-department-of-neurology-new-york-ny-june-2021-may-2022"
+class="section level4">
+<h4><strong>Columbia University Irving Medical Center, Department of
+Neurology</strong>, New York, NY (June 2021 – May 2022)</h4>
 <p><em>Research Fellow</em></p>
 <ul>
-<li>Analyzed dataset of 75 underserved 5th grade students to evaluate social and emotional learning (SEL) interventions using R</li>
-<li>Established novel data infrastructure for efficient assessment of intervention efficacy during implementation of SEL modules using SQL</li>
-<li>Finalized study design and compose IRB protocol for pilot clinical trial with vulnerable population</li>
-<li>Conducted in-depth research review on hundreds of SEL measurement scales to be optimally used in gauging mental health improvement</li>
+<li>Analyzed dataset of 75 underserved 5th grade students to evaluate
+social and emotional learning (SEL) interventions using R</li>
+<li>Established novel data infrastructure for efficient assessment of
+intervention efficacy during implementation of SEL modules using
+SQL</li>
+<li>Finalized study design and compose IRB protocol for pilot clinical
+trial with vulnerable population</li>
+<li>Conducted in-depth research review on hundreds of SEL measurement
+scales to be optimally used in gauging mental health improvement</li>
 </ul>
-<div id="department-of-chemistry-at-hunter-college-new-york-ny-january-2020-may-2022" class="section level5">
-<h5><strong>Department of Chemistry at Hunter College</strong>, New York, NY (January 2020 – May 2022)</h5>
-<p><em>Adjunct Lecturer for General Chemistry Lab and Inquiries into the Nature of Matter</em></p>
+<div
+id="department-of-chemistry-at-hunter-college-new-york-ny-january-2020-may-2022"
+class="section level5">
+<h5><strong>Department of Chemistry at Hunter College</strong>, New
+York, NY (January 2020 – May 2022)</h5>
+<p><em>Adjunct Lecturer for General Chemistry Lab and Inquiries into the
+Nature of Matter</em></p>
 <ul>
-<li>Instructed 60+ undergraduate students on proper lab techniques, safety protocol, and fundamental concepts of chemistry within experiments</li>
-<li>Assigned grades based on performance in laboratory and lab reports, as well as host weekly office hours to provide additional instruction</li>
+<li>Instructed 60+ undergraduate students on proper lab techniques,
+safety protocol, and fundamental concepts of chemistry within
+experiments</li>
+<li>Assigned grades based on performance in laboratory and lab reports,
+as well as host weekly office hours to provide additional
+instruction</li>
 </ul>
 </div>
-<div id="private-tutor-new-york-ny-august-2019-may-2022" class="section level5">
-<h5><strong>Private Tutor</strong>, New York, NY (August 2019 – May 2022)</h5>
-<p><em>Subjects: Algebra, Trigonometry, Calculus, Statistics, Biology, Chemistry (All Middle School – College Level)</em></p>
+<div id="private-tutor-new-york-ny-august-2019-may-2022"
+class="section level5">
+<h5><strong>Private Tutor</strong>, New York, NY (August 2019 – May
+2022)</h5>
+<p><em>Subjects: Algebra, Trigonometry, Calculus, Statistics, Biology,
+Chemistry (All Middle School – College Level)</em></p>
 <ul>
-<li>Prepared lesson plans tailored to needs of specific students and engage them using applicable examples and vernacular</li>
-<li>Assisted with assigned homework and projects, with recent clients receiving high marks on the math section of the SAT and As in Calculus</li>
+<li>Prepared lesson plans tailored to needs of specific students and
+engage them using applicable examples and vernacular</li>
+<li>Assisted with assigned homework and projects, with recent clients
+receiving high marks on the math section of the SAT and As in
+Calculus</li>
 </ul>
 </div>
-<div id="watch-limit-new-york-ny-november-2019-june-2021" class="section level5">
-<h5><strong>Watch Limit</strong>, New York, NY (November 2019 – June 2021)</h5>
+<div id="watch-limit-new-york-ny-november-2019-june-2021"
+class="section level5">
+<h5><strong>Watch Limit</strong>, New York, NY (November 2019 – June
+2021)</h5>
 <p><em>Operations Manager</em></p>
 <ul>
-<li>Examined monthly sales data to discover trends and set inventory prices based on current market value using R</li>
-<li>Input and managed business inventory between $1-2 million via MS Excel</li>
-<li>Oversaw and updated website on rolling basis to accurately reflect market changes</li>
+<li>Examined monthly sales data to discover trends and set inventory
+prices based on current market value using R</li>
+<li>Input and managed business inventory between $1-2 million via MS
+Excel</li>
+<li>Oversaw and updated website on rolling basis to accurately reflect
+market changes</li>
 </ul>
 </div>
-<div id="public-school-athletic-league-new-york-ny-january-2016-present" class="section level5">
-<h5><strong>Public School Athletic League</strong>, New York, NY (January 2016 – Present)</h5>
+<div id="public-school-athletic-league-new-york-ny-january-2016-present"
+class="section level5">
+<h5><strong>Public School Athletic League</strong>, New York, NY
+(January 2016 – Present)</h5>
 <p><em>Wrestling Tournament Manager</em></p>
 <ul>
-<li>Generate tournament brackets, minimizing variability in matches per mat and average time between matches</li>
-<li>Rectify spreadsheets with hundreds of registered wrestlers prior to tournament’s start</li>
-<li>Dictate assembly of electronics and equipment needed for tournament’s operation</li>
+<li>Generate tournament brackets, minimizing variability in matches per
+mat and average time between matches</li>
+<li>Rectify spreadsheets with hundreds of registered wrestlers prior to
+tournament’s start</li>
+<li>Dictate assembly of electronics and equipment needed for
+tournament’s operation</li>
 </ul>
 </div>
-<div id="nadine-johnson-associates-inc.-new-york-ny-january-2016-january-2020" class="section level5">
-<h5><strong>Nadine Johnson &amp; Associates, Inc.</strong>, New York, NY (January 2016 – January 2020)</h5>
+<div
+id="nadine-johnson-associates-inc.-new-york-ny-january-2016-january-2020"
+class="section level5">
+<h5><strong>Nadine Johnson &amp; Associates, Inc.</strong>, New York, NY
+(January 2016 – January 2020)</h5>
 <p><em>Assistant Finance Director</em></p>
 <ul>
-<li>Determined company’s monthly profitability by comparing revenue versus taxes and expenses using MS Excel</li>
-<li>Reconcile bank statements up to $250,000 monthly, ensuring accurate bookkeeping and constructed invoices by organizing client and employee expenses</li>
+<li>Determined company’s monthly profitability by comparing revenue
+versus taxes and expenses using MS Excel</li>
+<li>Reconcile bank statements up to $250,000 monthly, ensuring accurate
+bookkeeping and constructed invoices by organizing client and employee
+expenses</li>
 </ul>
 <hr />
 </div>
@@ -458,8 +532,11 @@ div.tocify {
 <div id="languageintermediate-russian" class="section level5">
 <h5><strong>Language:</strong>Intermediate Russian</h5>
 </div>
-<div id="software-r-sas-sql-spss-access-and-excel-all-advanced-usage" class="section level5">
-<h5><strong>Software:</strong> R, SAS, SQL, SPSS, Access, and Excel (All advanced usage)</h5>
+<div id="software-r-sas-sql-spss-access-and-excel-all-advanced-usage"
+class="section level5">
+<h5><strong>Software:</strong> R, SAS, SQL, SPSS, Access, and Excel (All
+advanced usage)</h5>
+</div>
 </div>
 </div>
 </div>

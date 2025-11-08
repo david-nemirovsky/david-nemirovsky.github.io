@@ -13,8 +13,8 @@
 
 <title>David Nemirovsky</title>
 
-<script src="site_libs/header-attrs-2.10/header-attrs.js"></script>
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/darkly.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -32,8 +32,8 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet" />
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -62,6 +62,7 @@ if (window.hljs) {
 
 
 
+
 <style type = "text/css">
 .main-container {
   max-width: 940px;
@@ -82,6 +83,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -139,11 +143,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -172,8 +180,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -181,16 +189,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -234,7 +235,7 @@ $(document).ready(function () {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -253,7 +254,13 @@ $(document).ready(function () {
   <a href="projects.html">Projects</a>
 </li>
 <li>
-  <a href="mailto:dn2501@cumc.columbia.edu">
+  <a href="https://scholar.google.com/citations?user=HV5IIrkAAAAJ&amp;hl=en&amp;oi=ao">
+    <span class="fa fa-book fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="mailto:david.nemirovsky97@gmail.com">
     <span class="fa fa-envelope fa-lg"></span>
      
   </a>
@@ -284,35 +291,83 @@ $(document).ready(function () {
 </div>
 
 
-<div id="assistant-research-biostatistician-at-mskcc" class="section level2">
-<h2>Assistant Research Biostatistician at MSKCC</h2>
+<div id="research-biostatistician-at-mskcc" class="section level2">
+<h2>Research Biostatistician at MSKCC</h2>
 </div>
-<div id="columbia-university-mailman-school-of-public-health-m.s.-in-biostatistics-may-2022" class="section level2">
-<h2>Columbia University Mailman School of Public Health, M.S. in Biostatistics (May 2022)</h2>
+<div
+id="columbia-university-mailman-school-of-public-health-m.s.-in-biostatistics-may-2022"
+class="section level2">
+<h2>Columbia University Mailman School of Public Health, M.S. in
+Biostatistics (May 2022)</h2>
 </div>
-<div id="hunter-college-b.a.-in-statistics-b.a.-in-biochemistry-may-2019" class="section level2">
-<h2>Hunter College, B.A. in Statistics &amp; B.A. in Biochemistry (May 2019)</h2>
+<div
+id="hunter-college-b.a.-in-statistics-b.a.-in-biochemistry-may-2019"
+class="section level2">
+<h2>Hunter College, B.A. in Statistics &amp; B.A. in Biochemistry (May
+2019)</h2>
 <p><br></p>
-<div align = "center">
+<div align="center">
 <p><img src="pro_pic.jpg" style="width:50.0%" /></p>
-<div align = "left">
-
+<div align="left">
 <p><br></p>
 <div id="about" class="section level3">
 <h3>About</h3>
-<p>I am currently working as an Assistant Research Biostatistician at Memorial Sloan Kettering Cancer Center. A majority of my time is spent collaborating on projects that involve multiple myeloma and leukemia survival differences using various treatments, analyzing claims data of patients with prostate cancer using SEER-Medicare data, and examining chemo-induced peripheral neuropathy in patients with breast cancer. My research interests include predictive modeling through machine learning and designing clinical trials across all phases.</p>
-<p>Currently enrolled in my final semester as an M.S. in Biostatistics student under the Theory and Methods track, I am looking to further my knowledge of statistical applications and data analytics in the realms of healthcare and public health. In May of 2019, I received my B.A. from Hunter College in both Statistics and Biochemistry, with a Yalow Honors Scholarship, while also receiving Departmental Honors in Biochemistry and the Shirley Kurmin Mazur Award in Mathematics. In May of 2021, I was awarded the FORWARD Community Practicum Fellowship from Columbia University.</p>
+<p>I am currently working as a Research Biostatistician at Memorial
+Sloan Kettering Cancer Center (MSKCC). A majority of my time is spent
+collaborating on projects involving hematologic malignancies, mainly
+assessing survival outcomes, efficacy of various treatments, bone marrow
+transplant outcomes, as well as infection rates. I also work on
+analyzing prostate cancer treatments and outcomes using SEER-Medicare
+data. My research interests include predictive modeling through machine
+learning and patient-reported outcomes. I am also a member of the Bridge
+to Biostats committee.</p>
+<p>In May of 2022, I graduated from Columbia University with an M.S. in
+Biostatistics, with a concentration in Theory and Methods. In May of
+2021, I was awarded the FORWARD Community Practicum Fellowship from
+Columbia University. In May of 2019, I received my B.A. from Hunter
+College in both Statistics and Biochemistry, with a Yalow Honors
+Scholarship, while also receiving Departmental Honors in Biochemistry
+and the Shirley Kurmin Mazur Award in Mathematics.</p>
 <p><br></p>
 </div>
 <div id="research" class="section level3">
 <h3>Research</h3>
-<p><strong>Graduate:</strong> Conducted quantitative research for the Department of Population and Family Health at the Columbia Mailman School of Public Health on multiracial identification across various physical and mental health outcomes and covariates. Additionally, I was a research fellow for Hip Hop HEALS at Columbia University’s Irving Medical Center. My research on this project included in-depth literature review on social and emotional learning (SEL) measurement scales for assessing outcomes, establishing data infrastructure, finalizing study design, and data analysis of pilot clinical trial data for efficient evaluation of intervention efficacy of the Be My Friend after-school multimedia modules administered by New York Edge.</p>
-<p><strong>Undergraduate:</strong> Conducted research for the Department of Chemistry on the removal of harmful radionuclides, such as technetium-99, which involved analytical chemistry and designing batch-study experiments.</p>
+<p><strong>Professional:</strong> Throughout my time at MSKCC, I have
+over 50 publications, with an h-index of 10 and an i10-index of 11.
+Please see my <a
+href="https://scholar.google.com/citations?user=HV5IIrkAAAAJ&amp;hl=en&amp;oi=ao">Google
+Scholars</a> page for more information.</p>
+<p><strong>Graduate:</strong> Conducted quantitative research for the
+Department of Population and Family Health at the Columbia Mailman
+School of Public Health on multiracial identification across various
+physical and mental health outcomes and covariates. Additionally, I was
+a research fellow for Hip Hop HEALS at Columbia University’s Irving
+Medical Center. My research on this project included in-depth literature
+review on social and emotional learning (SEL) measurement scales for
+assessing outcomes, establishing data infrastructure, finalizing study
+design, and data analysis of pilot clinical trial data for efficient
+evaluation of intervention efficacy of the Be My Friend after-school
+multimedia modules administered by New York Edge.</p>
+<p><strong>Undergraduate:</strong> Conducted research for the Department
+of Chemistry on the removal of harmful radionuclides, such as
+technetium-99, which involved analytical chemistry and designing
+batch-study experiments.</p>
 <p><br></p>
 </div>
 <div id="projects" class="section level3">
 <h3>Projects</h3>
-<p>A few projects I’ve worked on during my time at Columbia include predicting heart disease using diagnostic tests, predicting survival on the infamous cruise ship, R.M.S. <em>Titanic</em>, predicting the outcome of the 2021 NCAA DI Men’s Basketball Tournament, building a website which compares COVID-19 case and death data to that of past pandemics, and creating a linear model to determine covariates responsible for hate crimes within the U.S. in 2016. You can see more info on these in the <a href="https://david-nemirovsky.github.io/projects.html">Projects</a> tab.</p>
+<p>A few projects I’ve worked on during my time at Columbia include
+predicting heart disease using diagnostic tests, predicting survival on
+the infamous cruise ship, R.M.S. <em>Titanic</em>, predicting the
+outcome of the 2021 NCAA DI Men’s Basketball Tournament, building a
+website which compares COVID-19 case and death data to that of past
+pandemics, and creating a linear model to determine covariates
+responsible for hate crimes within the U.S. in 2016. You can see more
+info on these in the <a
+href="https://david-nemirovsky.github.io/projects.html">Projects</a>
+tab.</p>
+</div>
+</div>
 </div>
 </div>
 
