@@ -7,8 +7,10 @@ navbar:
       href: resume.html
     - text: "Projects"
       href: projects.html
+    - icon: fa-book fa-lg
+      href: https://scholar.google.com/citations?user=HV5IIrkAAAAJ&hl=en&oi=ao
     - icon: fa-envelope fa-lg
-      href: mailto:dn2501@cumc.columbia.edu
+      href: mailto:david.nemirovsky97@gmail.com
     - icon: fa-github fa-lg
       href: http://github.com/david-nemirovsky/
     - icon: fa-linkedin fa-lg
